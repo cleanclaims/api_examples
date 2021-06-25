@@ -18,7 +18,7 @@ public class Main {
         // The identifier provided to you by Clean Claims
         String key = "example_integration_abcdefg987654321";
 
-       Issue issue = new Issue();
+        Issue issue = new Issue();
         issue.setAddress(new Address("1234 N 5678 W", "Vineyard", "Utah", "84059"));
         issue.setDateOfLoss("2021-06-23");
         issue.setCategory("category_1");
