@@ -48,4 +48,22 @@ $jwt = JWT::encode($payload, $signingKey, "HS256");
 echo json_encode($jwt);
 
 // Use your preferred method of POSTing the jws value to your Clean Claims provided endpoint and parse the JSON response.
+// You can use the built-in "file_get_contents" which may or may not work depending on your server's configuration
+$url = '<Use URL provided by CleanClaims>';
+// Use key 'http' even though the URL will start with https
+$options = array(
+    'http' => array(
+        'header'=>  "Content-Type: application/json\r\n" .
+                    "Accept: application/json\r\n",
+        'method'  => 'POST',
+        'content' => $jwt,
+    )
+);
+
+$context  = stream_context_create($options);
+$result = json_decode(file_get_contents($url, false, $context));
+
+var_dump($result);
+
+echo $result->{'project_id'}
 ?>
