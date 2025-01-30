@@ -5,7 +5,7 @@ use Firebase\JWT\JWT;
 // The signing key provided to you by Clean Claims
 $signingKey = "example_abcdefghijklmnopqrstuvwxyz12345678910";
 
-// The identifier provided to you by Clean Claims
+// The integration key provided in the Clean Claims admin
 $key = "example_integration_abcdefg987654321";
 
 // Create and set any fields available
@@ -18,7 +18,7 @@ $issue["address"] = array(
 );
 $issue["date_of_loss"] = "2021-06-23";
 $issue["category"] = "category_1";
-$issue["issue_source"] = "Roof leak";
+$issue["source_or_reason_of_loss"] = "Roof leak";
 $issue["class"] = 1;
 
 $insurance = array();

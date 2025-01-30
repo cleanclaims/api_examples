@@ -15,14 +15,15 @@ public class Main {
         // The signing key provided to you by clean claims
         String signingKey = "example_abcdefghijklmnopqrstuvwxyz12345678910";
 
-        // The identifier provided to you by Clean Claims
+        // The integration key provided in the Clean Claims Admin
         String key = "example_integration_abcdefg987654321";
 
         Issue issue = new Issue();
         issue.setAddress(new Address("1234 N 5678 W", "Vineyard", "Utah", "84059"));
         issue.setDateOfLoss("2021-06-23");
         issue.setCategory("category_1");
-        issue.setIssueSource("Roof leak");
+        issue.setSourceOrReasonOfLoss("Roof leak");
+        issue.setAffectedAreas("Kitchen, Living Room");
         issue.setIssueClass(1);
 
         Insurance insurance = new Insurance();

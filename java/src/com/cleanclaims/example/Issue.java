@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Issue {
     private Address address;
-    private String issueSource;
-    private String moistureContent;
-    private Integer yearOfHome;
+    private String sourceOrReasonOfLoss;
+    private String affectedAreas;
+    private Integer yearOfStructure;
     private String dateOfLoss;
     private String category;
     @SerializedName("class")
@@ -15,10 +15,10 @@ public class Issue {
     public Issue() {
     }
 
-    public Issue(Address address, String issueSource, String moistureContent, Integer yearOfHome, String dateOfLoss, String category, Integer issueClass) {
+    public Issue(Address address, String sourceOrReasonOfLoss, String affectedAreas, Integer yearOfHome, String dateOfLoss, String category, Integer issueClass) {
         this.address = address;
-        this.issueSource = issueSource;
-        this.moistureContent = moistureContent;
+        this.sourceOrReasonOfLoss = sourceOrReasonOfLoss;
+        this.affectedAreas = affectedAreas;
         this.yearOfHome = yearOfHome;
         this.dateOfLoss = dateOfLoss;
         this.category = category;
@@ -29,12 +29,12 @@ public class Issue {
         this.address = address;
     }
 
-    public void setIssueSource(String issueSource) {
-        this.issueSource = issueSource;
+    public void setSourceOrReasonOfLoss(String sourceOrReasonOfLoss) {
+        this.sourceOrReasonOfLoss = sourceOrReasonOfLoss;
     }
 
-    public void setMoistureContent(String moistureContent) {
-        this.moistureContent = moistureContent;
+    public void setAffectedAreas(String affectedAreas) {
+        this.affectedAreas = affectedAreas;
     }
 
     public void setYearOfHome(Integer yearOfHome) {
